@@ -1,0 +1,13 @@
+accounts:
+  - id: "100"
+    account_number: "123456789"
+    balance: "900"
+  - id: "101"
+    account_number: "987654321"
+    balance: "2000"
+
+transactions:
+  - from_account_id: "100"
+    to_account_id: null
+    amount: "100"
+    type: "WITHDRAWAL"

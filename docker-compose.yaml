@@ -1,0 +1,20 @@
+services:
+
+  mysql:
+    image: mysql:8.0.23
+    restart: always
+    environment:
+      MYSQL_DATABASE: bank
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: db_pass
+      MYSQL_ROOT_PASSWORD: db_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./docker-compose-conf/mysql/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    healthcheck:
+      test: "cat /run/mysqld/mysqld.pid | grep \"1\""
+      retries: 5
+
+volumes:
+  mysql_data:
