@@ -4,7 +4,7 @@ Bank API
 Getting Started
 --------------------
 Pre requirements:
-- You need jdk23
+- You need jdk21
 - You need [maven](https://maven.apache.org/install.html) to be installed on your local machine
 - You need [docker](https://docs.docker.com/install/) to be installed on your local machine
 - You need [docker-compose](https://docs.docker.com/compose/install/) to be installed on your local machine
